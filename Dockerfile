@@ -2,7 +2,7 @@ FROM alpine:3.20.3
 ARG SCALA_VERSION="2.13"
 ARG KAFKA_VERSION="3.8.0"
 
-RUN apk --update --no-cache add openjdk17-jre curl && \
+RUN apk --update --no-cache add openjdk17-jre curl bash && \
   curl -s -o "/tmp/kafka_${SCALA_VERSION}-${KAFKA_VERSION}.tgz" "https://archive.apache.org/dist/kafka/${KAFKA_VERSION}/kafka_${SCALA_VERSION}-${KAFKA_VERSION}.tgz" && \
   tar -zxf "/tmp/kafka_${SCALA_VERSION}-${KAFKA_VERSION}.tgz" -C /opt && \
   rm -f "/tmp/kafka_${SCALA_VERSION}-${KAFKA_VERSION}.tgz"
