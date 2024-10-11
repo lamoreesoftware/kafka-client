@@ -13,4 +13,4 @@ ENV PATH="${PATH}:${JAVA_HOME}/bin"
 
 WORKDIR "/opt/kafka_${SCALA_VERSION}-${KAFKA_VERSION}"
 
-ENTRYPOINT [ "/bin/sh" ]
+ENTRYPOINT [ "/bin/bash" ]
